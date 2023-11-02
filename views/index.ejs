@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>books</title>
+</head>
+
+<body>
+  <div>
+    <a class="add" href="/add"><button>Add book</button></a>
+    <%books.forEach(ele=>{%>
+      <p>
+        <%=ele.id%>
+      </p>
+      <p>
+        <%=ele.title%>
+      </p>
+      <p>
+        <%=ele.notes%>
+      </p>
+      <img src="https://covers.openlibrary.org/b/<%= ele.book_id%>-S.jpg" />
+
+      <form action="/edit" method="post">
+        <input type="hidden" name="id" value="<%= ele.id %>" />
+        <button type="submit">Edit</button>
+      </form>
+
+      <form action="/delete" method="post">
+        <input type="hidden" name="id" value="<%= ele.id %>" />
+        <button type="submit">Delete</button>
+      </form>
+
+      <!-- <a class="delete" href="/delete/<%= ele.id %>"><button>Delete</button></a> -->
+      <% }) %>
+  </div>
+</body>
+
+</html>

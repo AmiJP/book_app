@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>add books</title>
+</head>
+
+<body>
+  <form action="/add" method="post">
+    <input type="text" name="title" placeholder="title" />
+    <input type="text" name="notes" placeholder="notes" />
+
+    <label for="book">Read Date:</label>
+    <input type="date" name="read_date" />
+
+    <label for="book">Choose a rating:</label>
+    <select name="rating">
+      <option value="1">1</option>
+      <option value="3">2</option>
+      <option value="4">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+
+
+    <label for="book">Choose a book_type:</label>
+    <select name="booktype">
+      <option value="id">id</option>
+      <option value="olid">olid</option>
+      <option value="isbn">isbn</option>
+      <option value="iccn">iccn</option>
+      <option value="ocic">ocic</option>
+      <option value="goodreads">goodreads</option>
+      <option value="librarything">goodreads</option>
+    </select>
+    <input type="text" name="value" placeholder="Enter a value" />
+    <button type="submit">Add book</button>
+  </form>
+</body>
+
+</html>
